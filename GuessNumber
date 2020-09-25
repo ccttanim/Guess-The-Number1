@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n1,guess,nguess=1;
+    srand(time(NULL));
+    n1=rand()%100+1;//Generates a random number between 1 and 100
+    //keep running the game until the number is guessed
+    do{
+        cout<<"Guess the number between 1 to 100 "<<endl;
+        cin>>guess;
+        if(guess>n1){
+            cout<<"Lower number please! "<<endl;
+
+        }
+        else if(guess<n1){
+            cout<<"Higher number please! "<<endl;
+        }
+        else{
+            cout<<"You guessed it in "<<nguess<<" attempts "<<endl;
+
+        }
+        nguess++;
+    } while(guess!=n1);
+    return 0;
+}
